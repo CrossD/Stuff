@@ -29,7 +29,7 @@
 
 # Name of the job - You'll probably want to customize this.
 #SBATCH --job-name=boot_camp_demo
-#SARRAY --range=0,1-19
+#SARRAY --range=0, 1-19
 
 # Standard out and Standard Error output files with the job number in the name.
 #SBATCH -o slurm_%j.out
