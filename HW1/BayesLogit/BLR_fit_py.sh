@@ -29,7 +29,7 @@
 module load pymods/2.7
 
 # Name of the job - You'll probably want to customize this.
-#SBATCH --job-name=blr_fit_data
+#SBATCH --job-name=q2
 # Specify range of jobs to run - passed into R as 'args'
 #SARRAY --range=1-200
 
@@ -39,6 +39,6 @@ module load pymods/2.7
 
 # Execute each of the jobs with a different index 
 # (the python script will then process this to do something different for each index):
-srun python BLR_fit.py -i ${SLURM_ARRAYID}
+srun python q2.py -i ${SLURM_ARRAYID}
 
 
