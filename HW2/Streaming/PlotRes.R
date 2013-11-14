@@ -1,9 +1,11 @@
+#!/usr/bin/Rscript --vanilla
 
 # Make 2D Histogram:
 
 #res <- read.table("mini_result.txt",sep=",",header=F)
-res <- read.table("full_results.txt",sep=",",header=F)
-head(res)
+res <- read.table("full_results.txt",sep=" ",header=F)
+# head(res)
+print(sum(res[, 5]))
 
 x <- apply(res[,1:2],1,mean)
 y <- apply(res[,3:4],1,mean)

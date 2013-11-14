@@ -12,7 +12,7 @@ if (mini){
 s <- 5 # 50
 r <- 50 # 100
 
-outpath <- "output"
+outpath <- "output/"
 respath <- "final"
 
 if (mini){
@@ -25,7 +25,7 @@ results.se.filename <- paste0(respath,"/",rootfilename,"_s",s,"_r",r,"_SE.txt")
 results.est.filename <- paste0(respath,"/",rootfilename,"_s",s,"_r",r,"_est.txt")
 
 outfile <- function(outpath,r_index,s_index){
-	return(paste0(outpath,"/","coef_",sprintf("%02d",s_index),"_",sprintf("%02d",r_index),".txt"))
+	return(paste0(outpath, "coef_", s_index, "_", r_index - 1, ".txt"))
 }
 
 coefs <- vector("list",s)
