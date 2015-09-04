@@ -47,3 +47,6 @@ out_*
 *.xdy
 *.tdo
 *.csv
+*.o
+*.so
+*.ptx
